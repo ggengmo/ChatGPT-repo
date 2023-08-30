@@ -31,13 +31,13 @@ function addAssistantMessage(message, atTop = false) {
   
   const formattedMessage = `
     <p>흐린 날씨에 어울리는 남자 향수로는 다음과 같은 제품들을 추천해 드립니다</p>
-    <ol>
+    <ul>
       <li>Dior Homme Intense: 묵직하고 풍부한 아로마의 플로랄 향이 흐린 날씨와 잘 어울리며, 세련된 남자성을 강조합니다</li>
       <li>Tom Ford Tobacco Vanille: 흡연가의 향기를 연상시키는 담배와 바닐라의 조화로운 향이 흐린 날씨의 분위기와 어울립니다.</li>
       <li>Chanel Allure Homme Sport: 시트러스와 플로럴의 경쾌한 향이 흐린 날씨의 우울한 분위기를 밝히며, 활기찬 느낌을 줍니다.</li>
       <li>Giorgio Armani Code: 스파이시한 향과 우디 노트가 조화롭게 어우러진 이 향수는 흐린 날씨에 차분한 분위기를 연출합니다.</li>
       <li>Yves Saint Laurent La Nuit de L'homme: 감귤향과 스파이시한 향조의 조화로운 향기로 흐린 날씨에 적합한 남성적인 분위기를 연출할 수 있습니다.</li>
-    </ol>
+    </ul>
     <p>이 중 원하시는 향기를 선택하여 흐린 날씨에 어울리는 향수를 찾아보세요.</p>
   `;
   
