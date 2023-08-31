@@ -18,10 +18,14 @@ body {
   border-radius: 20px;
 }
 
+#chat1 {
+  order: -1;
+}
+
 .chat-area {
   flex: 1;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   overflow-y: auto;
   padding: 20px;
 }
@@ -33,7 +37,6 @@ body {
   border-radius: 15px;
   word-wrap: break-word;
 }
-
 
 .user-bubble {
   align-self: flex-end;

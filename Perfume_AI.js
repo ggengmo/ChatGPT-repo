@@ -22,23 +22,18 @@ function addUserMessage(message) {
   const userBubble = document.createElement('div');
   userBubble.classList.add('chat-bubble', 'user-bubble');
   userBubble.textContent = message;
-  $chatArea.insertBefore(userBubble, $chatArea.firstChild);
+  $chatArea.appendChild(userBubble); // 새 메시지를 아래로 추가
+  $chatArea.scrollTop = $chatArea.scrollHeight; // 채팅창을 맨 아래로 스크롤
 }
 
-function addAssistantMessage(message, atTop = false) {
+function addAssistantMessage(message) {
   const assistantBubble = document.createElement('div');
   assistantBubble.classList.add('chat-bubble', 'assistant-bubble');
   assistantBubble.textContent = message;
-  
-
-  if (atTop) {
-    $chatArea.insertBefore(assistantBubble, $chatArea.firstChild);
-  } else {
-    $chatArea.insertBefore(assistantBubble, $chatArea.firstChild);
-  }
-
-  $chatArea.scrollTop = $chatArea.scrollHeight;
+  $chatArea.appendChild(assistantBubble); // 새 메시지를 아래로 추가
+  $chatArea.scrollTop = $chatArea.scrollHeight; // 채팅창을 맨 아래로 스크롤
 }
+
 
 function sendUserMessageToAPI(message) {
   const apiUrl = 'https://estsoft-openai-api.jejucodingcamp.workers.dev/';
