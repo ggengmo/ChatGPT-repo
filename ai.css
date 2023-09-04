@@ -1,18 +1,65 @@
+/* html {
+  width: 1200px;
+  height: 800px;
+} */
+
+/* 공통 스타일 */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: #333;
+/* 로고 스타일 */
+#logo {
+  display: flex;
+  margin-left: 1%;
 }
 
-form {
-  margin: 20px auto;
+/* 메인 컨테이너 스타일 */
+main {
+  display: flex; /* 가로로 나란히 배치하기 위해 flex 사용 */
+  align-items: flex-start; /* 세로 상단 정렬을 위해 추가 */
+  justify-content: space-between;
+  width: 100%; /* 추가: 메인 컨테이너가 전체 너비를 차지하도록 설정 */
+  flex-direction: row; /* 가로 정렬 */
+}
+
+/* perfume 이미지 스타일 */
+#perfume img {
+  max-height: 500px;
+  width: auto;
+  border-radius: 8px;
+  margin-right: 20px; /* 폼과 간격 주기 */
+}
+
+/* 컨테이너 스타일 */
+#container {
+  display: flex; /* 세로로 나란히 배치하기 위해 flex 사용 */
+  align-items: flex-start; /* 세로 상단 정렬을 위해 추가 */
+  width: 100%;
+}
+
+/* 폼 스타일 */
+form#perfumeForm {
+  margin: 0;
   padding: 20px;
   border: 1px solid #ccc;
-  width: 300px;
+  width: 458px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* 추천 말풍선 스타일 */
+#recommendation {
+  width: 458px;
+  height: 30px;
   background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: auto;
 }
 
 label {
@@ -20,24 +67,47 @@ label {
   margin-bottom: 5px;
 }
 
-select, input[type="text"], input[type="number"] {
+select {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
+  border-radius: 20px;
+  border: solid 1px;
+  border-width: 1px;
+  border-color: rgb(224, 224, 224);
+}
+
+input#age {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: solid 1px;
+  border-width: 1px;
+  border-color: rgb(224, 224, 224);
+}
+
+#gender {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#gender label {
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 button {
-  background-color: #333;
+  background-color: rgb(52, 152, 219);
   color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-}
-
-#recommendation {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  width: 300px;
-  background-color: #f9f9f9;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
 }
