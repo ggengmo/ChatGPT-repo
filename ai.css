@@ -51,6 +51,7 @@ main {
   float: left;
   /* margin-left: 7%; */
   border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
 }
 
 /* 폼 스타일 수정 */
@@ -184,8 +185,12 @@ button {
   font-size: 20px;
 }
 
-[placeholder]:empty:before {
-  display: block;
-  content: attr(placeholder);
-  color: #a6a6a6;
+#season, #favoriteScent {
+  color: grey;
+}
+option {
+  color: black
+}
+option[value='ex'][disabled]{
+  display: none;
 }

@@ -196,4 +196,19 @@ document.addEventListener("DOMContentLoaded", function () {
     recommendationBubble.textContent = message;
     $recommendation.appendChild(recommendationBubble);
   }
+
+  const seasonSelect = document.getElementById("season");
+  const favoriteScentSelect = document.getElementById("favoriteScent");
+  
+  seasonSelect.addEventListener("change", () => {
+    if (seasonSelect.value !== "ex") {
+      seasonSelect.style.color = "black";
+    }
+  });
+  
+  favoriteScentSelect.addEventListener("change", () => {
+    if (favoriteScentSelect.value !== "ex") {
+      favoriteScentSelect.style.color = "black";
+    }
+  });
 });
