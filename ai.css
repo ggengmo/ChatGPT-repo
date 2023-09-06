@@ -53,6 +53,15 @@ main {
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
 }
 
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px; /* 화면 가로폭에 맞게 조절 */
+  overflow: hidden; /* 넘치는 부분 숨김 */
+  height: 800px; /* 이미지 슬라이더의 높이 조절 */
+}
+
 /* 폼 스타일 */
 form#perfumeForm {
   display: flex;
