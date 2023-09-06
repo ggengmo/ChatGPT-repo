@@ -35,8 +35,9 @@
  ┣ 📜Perfume.css
  ┣ 📜Perfume.js
  ┗ 📜spin.js
- ## 4. UI
-
+## 4. UI
+### 4.1 MOCKUP 페이지
+- 웹 테스트 URL : https://ovenapp.io/project/m8uDgSzJDQAKxt01SEM4GFB5W32dJt8U#uMNyA
 
 
 
