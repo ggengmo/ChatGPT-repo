@@ -51,6 +51,6 @@
 - 추천받기 버튼 누른 후 응답 로딩 스피너
 ![05_추천받기 눌렀을 때 로딩 스피너](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/85e44bbc-7706-4c19-b63a-270b66263324)
 - AI 응답 예시
-![06_AI 응답 예시](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/8b93d22b-5389-46d8-9070-2951fac37a49)
+![06_AI 응답 예시](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/2ab69878-2d86-47e8-9434-c616ac428cd7)
 
 
