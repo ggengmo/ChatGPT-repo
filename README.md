@@ -52,6 +52,7 @@
 ![05_추천받기 눌렀을 때 로딩 스피너](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/85e44bbc-7706-4c19-b63a-270b66263324)
 - AI 응답 예시
 ![06_AI 응답 예시](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/2ab69878-2d86-47e8-9434-c616ac428cd7)
+
 ## 5. 기능
 ### 5.1 메인 기능
 - USER가 계절, 좋아하는 향, 나이 및 성별을 입력한 후 추천받기를 누르면 로딩 후 AI가 향수를 추천
