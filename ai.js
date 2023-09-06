@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const $genderFemale = document.getElementById('female');
   const $recommendation = document.getElementById('recommendation');
 
+
   // 사용자 대화 기록을 저장할 배열
   const trainingData = [
     {
@@ -22,7 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // 클릭 이벤트를 차단하여 사용자가 텍스트를 편집하지 못하도록 합니다.
   });
 
-  $recommendButton.addEventListener('click', getPerfumeRecommendation);
+  $recommendButton.addEventListener('click', function () {
+    // 버튼을 비활성화하여 다시 클릭하지 못하도록 함
+    $recommendButton.disabled = true;
+    $recommendation.innerHTML = '';
+    getPerfumeRecommendation();
+  });
 
   function showRecommendationDetails(perfumeDetails) {
     // 추천된 향수에 대한 상세 설명을 보여주는 함수
@@ -63,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trainingData.push(
         {
           "role": "user",
-          "content": "userMessage"
+          "content": userMessage
         }, {
           "role": "assistant",
           "content": "남자를 위한 향수 추천을 시작합니다."
@@ -155,8 +161,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // API 요청 데이터 준비
     const requestData = [
       {
-        role: "user",
-        content: userMessage
+        "role": "user",
+        "content": userMessage
       },
       ...trainingData
     ];
@@ -169,26 +175,31 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify(requestData)
     })
-      .then(response => response.json())
-      .then(data => {
-        if (data && data.choices && data.choices.length > 0) {
-          // 추천된 향수 메시지가 있는 경우
-          const assistantReply = data.choices[0].message.content;
-          if (assistantReply.startsWith("향수 추천:")) {
-            // 향수 추천 메시지인 경우 상세 정보 표시
-            showRecommendationDetails(data.choices[0].message);
-          } else {
-            // 그렇지 않으면 일반적인 답변 표시
-            showRecommendation(assistantReply);
-          }
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.choices && data.choices.length > 0) {
+        // 추천된 향수 메시지가 있는 경우
+        const assistantReply = data.choices[0].message.content;
+        if (assistantReply.startsWith("향수 추천:")) {
+          // 향수 추천 메시지인 경우 상세 정보 표시
+          showRecommendationDetails(data.choices[0].message);
         } else {
-          console.error('API 응답 데이터가 올바르지 않습니다.');
+          // 그렇지 않으면 일반적인 답변 표시
+          showRecommendation(assistantReply);
         }
-      })
-      .catch(error => {
-        console.error('API 요청 에러:', error);
-      });
+      } else {
+        console.error('API 응답 데이터가 올바르지 않습니다.');
+      }
+    })
+    .catch(error => {
+      console.error('API 요청 에러:', error);
+    })
+    .finally(() => {
+      // API 호출 완료 후 버튼을 다시 활성화
+      $recommendButton.disabled = false;
+    });
   }
+
 
   function showRecommendation(message) {
     const recommendationBubble = document.createElement('div');

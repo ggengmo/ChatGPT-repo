@@ -194,3 +194,10 @@ option {
 option[value='ex'][disabled]{
   display: none;
 }
+
+/*div recommendation을 placeholder 처럼 사용 */
+[placeholder]:empty:before {
+  display: block;
+  content: attr(placeholder);
+  color: #a6a6a6;
+}
