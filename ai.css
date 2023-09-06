@@ -1,6 +1,7 @@
 /* 공통 스타일 */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column-reverse;
@@ -40,7 +41,6 @@ main {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  /* width: 600px;*/
   height: 1000px;
 }
 
@@ -49,7 +49,6 @@ main {
   width: 800px;
   height: 800px;
   float: left;
-  /* margin-left: 7%; */
   border-radius: 8px;
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
 }
@@ -63,7 +62,6 @@ form#perfumeForm {
   height: 425px;
   margin: 0;
   padding: 20px;
-  /* border: 1px solid #ccc;  */
   background-color: white;
   border-radius: 8px;
   margin-left: 10%;
@@ -75,7 +73,6 @@ form#perfumeForm {
   width: 720px;
   height: 300px;
   background-color: rgb(255, 255, 255);
-  /* border: 1px solid #ccc; */
   border-radius: 8px;
   padding: 10px;
   margin-top: 10px;
@@ -83,8 +80,9 @@ form#perfumeForm {
   margin-bottom: 5px;
   overflow-y: auto;
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
-  line-height: 2rem;
+  line-height: 2.5rem;
   text-align: left;
+  font-weight: bold;
 }
 
 label {
@@ -93,7 +91,6 @@ label {
   font-weight: bold;
   font-size: 20px;
   padding-right: 14px;
-  /* text-align: center; */
 }
 
 select {
@@ -134,7 +131,6 @@ input#age {
   padding: 5px;
   margin-bottom: 5px;
   margin-left: 100px;
-  /* margin-top: -10px; */
 }
 
 #gender label {
