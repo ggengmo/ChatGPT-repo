@@ -103,7 +103,7 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
             </option>
           </select>
 ```
-- JavsScript, CSS에 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
+- JavsScript와와 CSS에 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
 ```
 const seasonSelect = document.getElementById("season");
   const favoriteScentSelect = document.getElementById("favoriteScent");
