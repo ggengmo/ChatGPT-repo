@@ -10,6 +10,7 @@
 ### 2.1 개발 환경
 - HTML, CSS, JavaScript
 ### 2.2 배포 URL
+- https://ggengmo.github.io/ChatGPT-repo/
 
 
 
