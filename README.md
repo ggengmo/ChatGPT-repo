@@ -71,7 +71,7 @@
 ### 5.2 추가 기능
 - 추천받은 향수가 있는 상태로 다른 조건으로 추천받기를 하면 바뀐 조건으로 다시 추천하며
 - 이미지 애니매이션을 스타일링하고 같은 이미지가 반복되지않게 함수를 만들었습니다
-
+![추가기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/766d3ce3-2263-4fc8-ae89-c5ba3766e9fa)
 ```
 let currentIndex = -1; // 현재 이미지 인덱스 초기화
   let previousIndex = -1; // 이전 이미지 인덱스 초기화
@@ -87,7 +87,6 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
     return images[currentIndex];
   }
 ```
-![추가기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/766d3ce3-2263-4fc8-ae89-c5ba3766e9fa)
 ## 6.개발 이슈
 ### 6.1 select 태그를 placeholder 처럼 스타일링 하기
 - 해당 코드처럼 select에 placeholder처럼 스타일링 하고 싶었지만 placeholder은 input 태그여서 적용이 안되었습니다.
