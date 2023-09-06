@@ -1,3 +1,5 @@
+import { Spinner } from './spin.js';
+
 document.addEventListener("DOMContentLoaded", function () {
   const $recommendButton = document.getElementById('recommendButton');
   const $season = document.getElementById('season');
@@ -7,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const $genderFemale = document.getElementById('female');
   const $recommendation = document.getElementById('recommendation');
 
-
-  // 사용자 대화 기록을 저장할 배열
   const trainingData = [
     {
       "role": "system",
@@ -16,19 +16,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  // recommendation div를 읽기 전용으로 설정
   $recommendation.setAttribute('contenteditable', 'false');
   $recommendation.style.cursor = 'not-allowed';
   $recommendation.addEventListener('click', function (event) {
-    event.preventDefault(); // 클릭 이벤트를 차단하여 사용자가 텍스트를 편집 못하게 하기.
+    event.preventDefault();
   });
 
   $recommendButton.addEventListener('click', function () {
-    // 버튼을 비활성화하여 다시 클릭하지 못하도록 함
     $recommendButton.disabled = true;
     $recommendation.innerHTML = '';
     getPerfumeRecommendation();
   });
+
+  // 아래 코드를 추가하여 스피너 관련 함수를 정의합니다.
+  function spinnerStart() {
+    let createSpinDiv = document.createElement("div");
+    createSpinDiv.setAttribute("id", "spinnerContainer1000");
+    let createSpinDivStyle = "width:100px; height:100px; margin:0 auto; padding:0; border:none;";
+    createSpinDivStyle = createSpinDivStyle + " float:top; position:relative; top:40%;";
+    createSpinDiv.setAttribute("style", createSpinDivStyle);
+    $recommendation.appendChild(createSpinDiv);
+
+    let opts = {
+      lines: 10,
+      length: 10,
+      width: 15,
+      radius: 42,
+      scale: 0.65,
+      corners: 1,
+      color: '#007BFF',
+      fadeColor: 'transparent',
+      opacity: 0.05,
+      rotate: 0,
+      direction: 1,
+      speed: 1,
+      trail: 74,
+      fps: 30,
+      zIndex: 2e9
+    };
+
+    let target = document.getElementById("spinnerContainer1000");
+    let spinner = new Spinner(opts).spin(target);
+  }
+
+  function spinnerStop() {
+    try {
+      let tagId = document.getElementById("spinnerContainer1000");
+      $recommendation.removeChild(tagId);
+    }
+    catch (exception) {
+      console.error("catch : " + "not find spinnerContainer1000");
+    }
+  }
+
 
   function showRecommendationDetails(perfumeDetails) {
     // 추천된 향수에 대한 상세 설명을 보여주는 함수
@@ -174,6 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ...trainingData
     ];
 
+    spinnerStart() // 스피너 시작
+
     // API 호출
     fetch('https://estsoft-openai-api.jejucodingcamp.workers.dev/', {
       method: 'POST',
@@ -204,8 +246,10 @@ document.addEventListener("DOMContentLoaded", function () {
     .finally(() => {
       // API 호출 완료 후 버튼을 다시 활성화
       $recommendButton.disabled = false;
+      spinnerStop() // 스피너 정지
     });
   }
+
 
 
   function showRecommendation(message) {
@@ -230,3 +274,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
