@@ -89,7 +89,7 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
 ![추가기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/766d3ce3-2263-4fc8-ae89-c5ba3766e9fa)
 ## 6.개발 이슈
 ### 6.1 select 태그를 placeholder 처럼 스타일링 하기
-- 해당 코드처럼 select에 placeholder처럼 스타일링 하고 싶었지만 placeholder은 input 태그여서 적용이 안되었는데 JavsScript, CSS에 
+- 해당 코드처럼 select에 placeholder처럼 스타일링 하고 싶었지만 placeholder은 input 태그여서 적용이 안되었습니다.
 ```
 <label for="season"><b>계절</b></label>
           <select id="season" required>
@@ -103,7 +103,7 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
             </option>
           </select>
 ```
-- 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
+- JavsScript, CSS에 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
 ```
 const seasonSelect = document.getElementById("season");
   const favoriteScentSelect = document.getElementById("favoriteScent");
