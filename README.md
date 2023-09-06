@@ -39,5 +39,3 @@
 ### 4.1 MOCKUP 페이지
 - 웹 테스트 URL : https://ovenapp.io/view/m8uDgSzJDQAKxt01SEM4GFB5W32dJt8U/uMNyA
 
-
-
