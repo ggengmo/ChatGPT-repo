@@ -137,15 +137,12 @@ const seasonSelect = document.getElementById("season");
 ```
 
 ### 6.2 div 태그를 placeholder 처럼 스타일링 하기
-- recommendation에도 placeholder처럼 스타일링을 하고싶었지만 input 태그여서
+
+- recommendation에도 placeholder처럼 스타일링을 하고싶었지만 input 태그여서 해당 코드를 CSS에 입력하여 해결했습니다.
 
 ```
 <div id="recommendation" contenteditable placeholder="AI가 가상 제품을 추천해주거나 영어 이름과 한글 이름이 다를 수 있으니 주의하세요!"></div>
-```
 
-- 해당 코드를 CSS에 입력하여 해결했습니다.
-
-```
 [placeholder]:empty:before {
   display: block;
   content: attr(placeholder);
