@@ -54,7 +54,7 @@ main {
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
 }
 
-/* 폼 스타일 수정 */
+/* 폼 스타일 */
 form#perfumeForm {
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@ form#perfumeForm {
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
 }
 
-/* recommendation 스타일 수정 */
+/* recommendation 스타일 */
 #recommendation {
   width: 720px;
   height: 300px;
@@ -83,7 +83,7 @@ form#perfumeForm {
   margin-bottom: 5px;
   overflow-y: auto;
   box-shadow: 5px 5px 10px rgba(224, 224, 224, 0.53);
-  line-height: 1.5rem;
+  line-height: 2rem;
   text-align: left;
 }
 

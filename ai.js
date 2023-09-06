@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $recommendation.setAttribute('contenteditable', 'false');
   $recommendation.style.cursor = 'not-allowed';
   $recommendation.addEventListener('click', function (event) {
-    event.preventDefault(); // 클릭 이벤트를 차단하여 사용자가 텍스트를 편집하지 못하도록 합니다.
+    event.preventDefault(); // 클릭 이벤트를 차단하여 사용자가 텍스트를 편집 못하게 하기.
   });
 
   $recommendButton.addEventListener('click', function () {
@@ -34,13 +34,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // 추천된 향수에 대한 상세 설명을 보여주는 함수
     const recommendationDetailsBubble = document.createElement('div');
     recommendationDetailsBubble.classList.add('chat-bubble', 'assistant-bubble');
-
-    const detailsMessage = `추천하는 향수: ${perfumeDetails.name}\n\n`;
-    const description = `설명: ${perfumeDetails.description}\n`;
-    const notes = `향조: ${perfumeDetails.notes}\n`;
-    const suitability = `적합한 계절: ${perfumeDetails.suitability}\n`;
-
-    recommendationDetailsBubble.textContent = detailsMessage + description + notes + suitability;
+  
+    // 추천 향수 정보 추출
+    const name = perfumeDetails.name;
+    const description = perfumeDetails.description;
+    const notes = perfumeDetails.notes;
+  
+    // 향수 추천 설명을 구성
+    const formattedMessage = `
+      ${seasonSelect.value}에 어울리는 ${favoriteScentSelect.value} 향을 가진 향수를 추천해드리겠습니다. 
+      ${gender.value}이며 ${age}세 이신 경우에는 다음과 같은 향수를 추천해드립니다:
+      ${name} - ${description}: ${notes}
+    `;
+  
+    recommendationDetailsBubble.textContent = formattedMessage;
     $recommendation.appendChild(recommendationDetailsBubble);
   }
 
