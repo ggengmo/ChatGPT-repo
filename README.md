@@ -109,7 +109,6 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
 
 ```
 // 초기 텍스트 색상이 회색으로 설정. 사용자가 옵션을 선택할 때 마다 선택된 옵션의 색은 검은색으로 변경합니다.
-```
 #season, #favoriteScent {
   color: grey;
 }
