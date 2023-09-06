@@ -14,6 +14,7 @@
 
 ## 3. 프로젝트 구조
 ### 3.1 프로젝트 구조
+
 📦Perfume_AI
  ┣ 📂img
  ┃ ┣ 📜MOMO_logo.png
