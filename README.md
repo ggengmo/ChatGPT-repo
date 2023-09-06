@@ -14,7 +14,7 @@
 - USER의 취향의 따라 계절, 좋아하는 향, 나이, 성별에 따른 향수를 추천
 ### 1.2 기능
 - USER가 계절, 좋아하는 향, 나이 및 성별을 입력 후 추천받기 버튼을 누르면 ChatGPT API를 통해 향수를 추천해줍니다.
-- 처음에 입력한 값으로 추천을 받은 상태로 다른 계절이나 향, 성별을 다른걸로 추천받기를 누르면 다시 추천해줍니다.
+![마인드맵](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/4bd0bcb7-60b1-403f-a9f5-cf7022855513)
 ## 2. 개발 환경 및 배포 URL
 ### 2.1 개발 환경
 - HTML, CSS, JavaScript
@@ -103,11 +103,23 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
             </option>
           </select>
 ```
-- JavsScript와 CSS에 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
+- CSS와 JavaScript에 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
 ```
+// 초기 텍스트 색상이 회색으로 설정. 사용자가 옵션을 선택할 때 마다 선택된 옵션의 색은 검은색으로 변경합니다.
+```
+#season, #favoriteScent {
+  color: grey;
+}
+option {
+  color: black
+}
+option[value='ex'][disabled]{
+  display: none;
+}
+
 const seasonSelect = document.getElementById("season");
   const favoriteScentSelect = document.getElementById("favoriteScent");
-  
+  //옵션을 선택하면 change 함수가 발생하여 드롭다운 메뉴에서 선택한 값이 ex가 아닌경우에만 텍스트 색상이 검은색으로 변경합니다
   seasonSelect.addEventListener("change", () => {
     if (seasonSelect.value !== "ex") {
       seasonSelect.style.color = "black";
@@ -119,15 +131,6 @@ const seasonSelect = document.getElementById("season");
       favoriteScentSelect.style.color = "black";
     }
   });
-#season, #favoriteScent {
-  color: grey;
-}
-option {
-  color: black
-}
-option[value='ex'][disabled]{
-  display: none;
-}
 ```
 ### 6.2 div 태그를 placeholder 처럼 스타일링 하기
 - recommendation에도 placeholder처럼 스타일링을 하고싶었지만 input 태그여서
