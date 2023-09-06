@@ -100,7 +100,7 @@ option[value='ex'][disabled]{
   display: none;
 }
 ```
-### 6.2
+### 6.2 div 태그를 placeholder 처럼 스타일링 하기
 - recommendation에도 placeholder처럼 스타일링을 하고싶었지만 input 태그여서
 ```
 <div id="recommendation" contenteditable placeholder="AI가 가상 제품을 추천해주거나 영어 이름과 한글 이름이 다를 수 있으니 주의하세요!"></div>
