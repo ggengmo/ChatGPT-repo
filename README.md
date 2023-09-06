@@ -58,7 +58,24 @@
 - USER가 계절, 좋아하는 향, 나이 및 성별을 입력한 후 추천받기를 누르면 로딩 후 AI가 향수를 추천
 ![기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/aa69754c-296d-4125-a051-4eda3d4d467f)
 ### 5.2 추가 기능
-- ![추가기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/766d3ce3-2263-4fc8-ae89-c5ba3766e9fa)
+- 추천받은 향수가 있는 상태로 다른 조건으로 추천받기를 하면 바뀐 조건으로 다시 추천
+- 이미지 애니매이션을 스타일링하고 같은 이미지가 반복되지않게 루프를 만들었습니다
+```
+let currentIndex = -1; // 현재 이미지 인덱스 초기화
+  let previousIndex = -1; // 이전 이미지 인덱스 초기화
+
+  function getRandomImage() {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * images.length); //randomIndex 값이 현재 이미지의 인덱스 currentIndex나 이전 이미지의 인덱스 previousIndex와 같다면, 다시 무작위 인덱스를 생성하고 반복합니다.
+    } while (randomIndex === currentIndex || randomIndex === previousIndex); // 현재 이미지나 이전 이미지와 중복되지 않도록 반복
+  
+    previousIndex = currentIndex;
+    currentIndex = randomIndex;
+    return images[currentIndex];
+  }
+```
+![추가기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/766d3ce3-2263-4fc8-ae89-c5ba3766e9fa)
 ## 6.개발 이슈
 ### 6.1 select 태그를 placeholder 처럼 스타일링 하기
 - 해당 코드처럼 select에 placeholder처럼 스타일링 하고 싶었지만 placeholder은 input 태그여서 적용이 안되었는데 JavsScript, CSS에 
