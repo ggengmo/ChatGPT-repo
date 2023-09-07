@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const trainingData = [
     {
       "role": "system",
-      "content": "assistant는 향수 전문가인 시향사 입니다."
+      "content": "assistant는 향수 전문가인 조향사 입니다."
     }
   ];
 
