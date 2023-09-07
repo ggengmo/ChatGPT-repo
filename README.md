@@ -18,7 +18,7 @@
 ![마인드맵](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/4bd0bcb7-60b1-403f-a9f5-cf7022855513)
 ## 2. 개발 환경 및 배포 URL
 ### 2.1 개발 환경
-- Visual Studio Code, HTML, CSS, JavaScript
+- Visual Studio Code로 HTML, CSS, JavaScript
 ### 2.2 배포 URL
 - https://ggengmo.github.io/ChatGPT-repo/
 
@@ -52,16 +52,6 @@
 - 웹 테스트 URL : https://ovenapp.io/view/m8uDgSzJDQAKxt01SEM4GFB5W32dJt8U/uMNyA
 - 메인페이지
 ![01_메인 화면](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/50b5f7e3-0072-416a-b145-06b9f6724c83)
-- 계절 선택
-![02_계절 선택](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/efa74252-b8f2-41ed-ac4a-830f5ffe2969)
-- 좋아하는 향 선택
-![03_좋아하는 향 선택](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/26150116-c622-4b4c-a320-8bba07dcf4b1)
-- 나이와 성별 선택
-![04_나이와 성별 선택](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/d5dabe7a-6f40-4ef7-aaeb-20a523003c8e)
-- 추천받기 버튼 누른 후 응답 로딩 스피너
-![05_추천받기 눌렀을 때 로딩 스피너](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/85e44bbc-7706-4c19-b63a-270b66263324)
-- AI 응답 예시
-![06_AI 응답 예시](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/2ab69878-2d86-47e8-9434-c616ac428cd7)
 
 ## 5. 기능
 ### 5.1 메인 기능
