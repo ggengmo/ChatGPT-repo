@@ -18,7 +18,7 @@
 ![마인드맵](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/4bd0bcb7-60b1-403f-a9f5-cf7022855513)
 ## 2. 개발 환경 및 배포 URL
 ### 2.1 개발 환경
-- Visual Studio Code로 HTML, CSS, JavaScript
+- HTML, CSS, JavaScript
 ### 2.2 배포 URL
 - https://ggengmo.github.io/ChatGPT-repo/
 
