@@ -62,7 +62,7 @@
 - 추천받은 향수가 있는 상태로 다른 조건으로 추천받기를 하면 바뀐 조건으로 다시 추천하며
 - 이미지 애니매이션을 스타일링하고 같은 이미지가 반복되지않게 함수를 만들었습니다
 ![추가기능](https://github.com/ggengmo/ChatGPT-repo/assets/142369113/766d3ce3-2263-4fc8-ae89-c5ba3766e9fa)
-```
+```JavaScript
 let currentIndex = -1; // 현재 이미지 인덱스 초기화
   let previousIndex = -1; // 이전 이미지 인덱스 초기화
 
@@ -80,7 +80,7 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
 ## 6.개발 이슈
 ### 6.1 select 태그를 placeholder 처럼 스타일링 하기
 - 해당 코드처럼 select에 placeholder처럼 스타일링 하고 싶었지만 placeholder은 input 태그여서 적용이 안되었습니다.
-```
+```html
 <label for="season"><b>계절</b></label>
           <select id="season" required>
             <option value="ex" selected disabled>
@@ -96,7 +96,7 @@ let currentIndex = -1; // 현재 이미지 인덱스 초기화
 
 - CSS와 JavaScript에 해당 코드를 입력하면서 placeholder 처럼 스타일링하여 해결했습니다.
 
-```
+```CSS
 // 초기 텍스트 색상이 회색으로 설정. 사용자가 옵션을 선택할 때 마다 선택된 옵션의 색은 검은색으로 변경합니다.
 #season, #favoriteScent {
   color: grey;
@@ -107,7 +107,8 @@ option {
 option[value='ex'][disabled]{
   display: none;
 }
-
+```
+```JavaScript
 const seasonSelect = document.getElementById("season");
   const favoriteScentSelect = document.getElementById("favoriteScent");
   //옵션을 선택하면 change 함수가 발생하여 드롭다운 메뉴에서 선택한 값이 ex가 아닌경우에만 텍스트 색상이 검은색으로 변경합니다
@@ -128,7 +129,7 @@ const seasonSelect = document.getElementById("season");
 
 - recommendation에도 placeholder처럼 스타일링을 하고싶었지만 input 태그여서 해당 코드를 CSS에 입력하여 해결했습니다.
 
-```
+```CSS
 <div id="recommendation" contenteditable placeholder="AI가 가상 제품을 추천해주거나 영어 이름과 한글 이름이 다를 수 있으니 주의하세요!"></div>
 
 [placeholder]:empty:before {
